@@ -9,7 +9,7 @@ public class printSomething : MonoBehaviour
 
 
     //the name of the DLL you want to load stuff from
-    private const string pluginName = "UnityWeaponPlugin";
+    private const string pluginName = "UnityWeaponPlugin.dll";
     //native interface
     [DllImport(pluginName)]
     private static extern IntPtr getEventFunction();
