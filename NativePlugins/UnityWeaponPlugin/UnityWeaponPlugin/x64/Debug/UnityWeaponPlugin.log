@@ -1,2 +1,4 @@
-﻿  UnityWeaponPlugin.vcxproj -> C:\GameDev\Bullet-Holic\NativePlugins\UnityWeaponPlugin\UnityWeaponPlugin\x64\Debug\UnityWeaponPlugin.dll
+﻿  UnityWeaponPlugin.cpp
+     Creating library C:\Bullet Holic\NativePlugins\UnityWeaponPlugin\UnityWeaponPlugin\x64\Debug\UnityWeaponPlugin.lib and object C:\Bullet Holic\NativePlugins\UnityWeaponPlugin\UnityWeaponPlugin\x64\Debug\UnityWeaponPlugin.exp
+  UnityWeaponPlugin.vcxproj -> C:\Bullet Holic\NativePlugins\UnityWeaponPlugin\UnityWeaponPlugin\x64\Debug\UnityWeaponPlugin.dll
           1 file(s) copied.

@@ -76,6 +76,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\Program Files\Unity\Hub\Editor\2019.3.0f3\Editor\Data\PluginAPI;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -86,7 +87,7 @@
       <AdditionalIncludeDirectories>C:\Program Files\Unity\Hub\Editor\2019.3.0f3\Editor\Data\PluginAPI;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <PostBuildEvent>
-      <Command>copy/Y "$(TargetDir)$(TargetName).dll" "C:\GameDev\Bullet-Holic\Assets\Plugins\UnityWeaponPlugin"</Command>
+      <Command>copy/Y "$(TargetDir)$(TargetName).dll" "C:\Bullet Holic\Assets\Plugins\UnityWeaponPlugin"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
