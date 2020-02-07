@@ -1,0 +1,2 @@
+#define BULLETHOLICPHYSICS_API __declspec(dllexport)
+#define BULLETHOLICPHYSICS_API __declspec(dllimport)
