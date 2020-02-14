@@ -162,12 +162,16 @@
     <None Include="cpp.hint" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Bodies.h" />
     <ClInclude Include="Bullet Holic Physics.h" />
+    <ClInclude Include="Bullet.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Bodies.cpp" />
     <ClCompile Include="Bullet Holic Physics.cpp" />
+    <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

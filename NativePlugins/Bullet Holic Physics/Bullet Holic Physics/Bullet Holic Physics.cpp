@@ -9,6 +9,12 @@
 
 extern "C" {
 	FOOPLUGINFUNCTION_API float FooPluginFunction() { return 5.0F; }
+
+
+	void Update() {
+
+
+	}
 }
 
 
