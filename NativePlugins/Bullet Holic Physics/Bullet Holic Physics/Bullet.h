@@ -1,15 +1,16 @@
 #pragma once
-#include <vector>
+#include "Vector2.h"
 using namespace std;
-	
+
+
 	class Bullet
 	{
 		Bullet();
-		Bullet(vector<float>Position, vector<float>Velocity, vector<float>Acceleration);
+		Bullet(Vector2 Position, Vector2 Velocity, Vector2 Acceleration);
 		~Bullet();
-		
-		vector<float> position;
-		vector<float> velocity; 
-		vector<float> acceleration;
-	};
 
+
+		Vector2 position;
+		Vector2 velocity;
+		Vector2 acceleration;
+	};

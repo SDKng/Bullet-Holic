@@ -14,6 +14,7 @@
 class BULLETHOLICPHYSICS_API CBulletHolicPhysics {
 public:
 	CBulletHolicPhysics(void);
+
 	// TODO: add your methods here.
 };
 
