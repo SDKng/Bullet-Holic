@@ -165,6 +165,7 @@
     <ClInclude Include="Bodies.h" />
     <ClInclude Include="Bullet Holic Physics.h" />
     <ClInclude Include="Bullet.h" />
+    <ClInclude Include="BulletManager.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="HitBox.h" />
     <ClInclude Include="pch.h" />
@@ -175,6 +176,7 @@
     <ClCompile Include="Bodies.cpp" />
     <ClCompile Include="Bullet Holic Physics.cpp" />
     <ClCompile Include="Bullet.cpp" />
+    <ClCompile Include="BulletManager.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="HitBox.cpp" />
     <ClCompile Include="pch.cpp">

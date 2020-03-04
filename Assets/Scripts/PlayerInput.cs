@@ -13,6 +13,8 @@ public class PlayerInput : MonoBehaviour
     bool canMove;
 
     Vector2 mousePosition;
+    public Texture2D cursorTexture;
+
 
 
     // Start is called before the first frame update
@@ -22,6 +24,11 @@ public class PlayerInput : MonoBehaviour
         canMove = true;
         axisValue = new Vector2();
         Debug.Log("Screen Size: (" + Screen.width + ", " + Screen.height + ")");
+
+        //Cursor.visible = false;
+        Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.Auto);
+
+        
     }
 
     // Update is called once per frame

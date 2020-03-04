@@ -3,23 +3,17 @@
 
 
 
-#define FOOPLUGINFUNCTION_API __declspec(dllexport)
+
 
 	Bullet::Bullet() {}
 
-	Bullet::Bullet(Vector2 Position, Vector2 Velocity, Vector2 Acceleration) {
+	Bullet::Bullet(Vector2 Position, Vector2 Velocity, Vector2 Acceleration, int Id) {
 
 		position = Position;
 		velocity = Velocity;
 		acceleration = Acceleration;
+		id = Id;
 
 
 	}
 
-	extern "C" {
-
-		FOOPLUGINFUNCTION_API  float returnPositionX() {
-
-			return ;
-		}
-	}
