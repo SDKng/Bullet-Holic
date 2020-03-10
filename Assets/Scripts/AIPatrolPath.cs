@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
-public class BasicAIPath : MonoBehaviour
-{
 
-    public Transform target;
+public class AIPatrolPath : MonoBehaviour
+{
+    public Transform patrolPoint;
+    public Transform patrolPoint2;
+    Transform target;
     public Transform enemyImage;
 
     public float speed = 200f;
@@ -26,7 +28,7 @@ public class BasicAIPath : MonoBehaviour
     {
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
-
+        target = patrolPoint;
         InvokeRepeating("UpdatePath", 0f, 0.5f);
     }
 
@@ -49,14 +51,22 @@ public class BasicAIPath : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(path == null)
+        if (path == null)
         {
             return;
         }
 
-        if(currentWaypoint >= path.vectorPath.Count)
+        if (currentWaypoint >= path.vectorPath.Count)
         {
             reachedEnd = true;
+            if(target == patrolPoint)
+            {
+                target = patrolPoint2;
+            }
+            else
+            {
+                target = patrolPoint;
+            }
             return;
         }
         else
@@ -72,13 +82,13 @@ public class BasicAIPath : MonoBehaviour
 
         float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
 
-        if(distance < nextWaypointDistance)
+        if (distance < nextWaypointDistance)
         {
             currentWaypoint++;
         }
 
-  
-        if(force.x >= 0.01f && force.y >= 0.01f)
+
+        if (force.x >= 0.01f && force.y >= 0.01f)
         {
             enemyImage.localScale = new Vector3(-1f, -1f, 1f);
         }
