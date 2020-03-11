@@ -9,6 +9,7 @@ public class PatrolingEnemy : MonoBehaviour
     public float fireRate;
 
     float dt;
+    float lootDropValue;
 
     Transform target;
 
@@ -46,7 +47,25 @@ public class PatrolingEnemy : MonoBehaviour
             //hit player
 
         }
+
+        if (col.gameObject.tag == "Bullet")
+        {
+            //health - damage
+
+            if(health <= 0)
+            {
+                OnDeath();
+            }
+        }
+
     }
 
+    private void OnDeath()
+    {
+        //spawn loot
+
+
+        DestroyImmediate(this.gameObject);
+    }
 
 }

@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
     public float fireRate;
 
     float dt;
+    float lootDropValue;
 
     Transform target;
     // Start is called before the first frame update
@@ -38,6 +39,25 @@ public class Enemy : MonoBehaviour
             //hit player
 
         }
+
+        if (col.gameObject.tag == "Bullet")
+        {
+            //health - damage
+
+            if (health <= 0)
+            {
+                OnDeath();
+            }
+        }
     }
+
+    private void OnDeath()
+    {
+        //spawn loot
+
+
+        DestroyImmediate(this.gameObject);
+    }
+
 
 }

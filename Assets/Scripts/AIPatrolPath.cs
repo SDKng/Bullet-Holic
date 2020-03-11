@@ -7,6 +7,9 @@ public class AIPatrolPath : MonoBehaviour
 {
     public Transform patrolPoint;
     public Transform patrolPoint2;
+    public Transform patrolPoint3;
+    public Transform patrolPoint4;
+
     Transform target;
     public Transform enemyImage;
 
@@ -59,11 +62,19 @@ public class AIPatrolPath : MonoBehaviour
         if (currentWaypoint >= path.vectorPath.Count)
         {
             reachedEnd = true;
-            if(target == patrolPoint)
+            if(target == patrolPoint && patrolPoint2 != null)
             {
                 target = patrolPoint2;
+            } 
+            else if(target == patrolPoint2 && patrolPoint3 != null)
+            {
+                target = patrolPoint3;
+            } 
+            else if (target == patrolPoint3 && patrolPoint4 != null)
+            {
+                target = patrolPoint4;
             }
-            else
+            else if (target == patrolPoint4)
             {
                 target = patrolPoint;
             }
