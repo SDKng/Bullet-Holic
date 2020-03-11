@@ -6,18 +6,17 @@ public class Enemy : MonoBehaviour
 {
     public float health;
     public float fireRate;
+    public float lootDropValue;
 
     float dt;
-    float lootDropValue;
+    
 
     Transform target;
-    // Start is called before the first frame update
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         dt = Time.deltaTime;
