@@ -38,6 +38,15 @@ public class PatrolingEnemy : MonoBehaviour
         }
     }
 
+    private void OnTriggerExit2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Player" && this.gameObject.GetComponent<BasicAIPath>().enabled == true)
+        {
+            this.gameObject.GetComponent<AIPatrolPath>().enabled = true;
+            this.gameObject.GetComponent<BasicAIPath>().enabled = false;
+        }
+    }
+
     private void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.tag == "Player")
