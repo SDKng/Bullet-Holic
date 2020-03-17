@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
 
-public class AIPatrolPath : MonoBehaviour
+public class AIRandomPatrolPath : MonoBehaviour
 {
     public Transform patrolPoint;
     public Transform patrolPoint2;
@@ -21,7 +21,6 @@ public class AIPatrolPath : MonoBehaviour
     int currentWaypoint = 0;
 
     bool reachedEnd = false;
-    bool targetUpdated = false;
 
     Seeker seeker;
     Rigidbody2D rb;
@@ -63,25 +62,21 @@ public class AIPatrolPath : MonoBehaviour
         if (currentWaypoint >= path.vectorPath.Count)
         {
             reachedEnd = true;
-            if(target == patrolPoint && patrolPoint2 != null && targetUpdated == false)
+            if (target == patrolPoint && patrolPoint2 != null)
             {
                 target = patrolPoint2;
-                targetUpdated = true;
-            } 
-            else if(target == patrolPoint2 && patrolPoint3 != null && targetUpdated == false)
+            }
+            else if (target == patrolPoint2 && patrolPoint3 != null)
             {
                 target = patrolPoint3;
-                targetUpdated = true;
-            } 
-            else if (target == patrolPoint3 && patrolPoint4 != null && targetUpdated == false)
+            }
+            else if (target == patrolPoint3 && patrolPoint4 != null)
             {
                 target = patrolPoint4;
-                targetUpdated = true;
             }
-            else if (target == patrolPoint4 && patrolPoint != null && targetUpdated == false)
+            else if (target == patrolPoint4 && patrolPoint != null)
             {
                 target = patrolPoint;
-                targetUpdated = true;
             }
             return;
         }
@@ -89,7 +84,7 @@ public class AIPatrolPath : MonoBehaviour
         {
             reachedEnd = false;
         }
-        targetUpdated = false;
+
         Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
 
         Vector2 force = direction * speed * Time.deltaTime;
