@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PatrolingEnemy : Enemy
+public class BasicEnemy : Enemy
 {
 
     float dt;
@@ -17,33 +17,11 @@ public class PatrolingEnemy : Enemy
         fireTimer += dt;
     }
 
-    private void OnTriggerEnter2D(Collider2D col)
-    {
-        //switch to chasing when player moves close to enemy
-        if (col.gameObject.tag == "Player" && this.gameObject.GetComponent<BasicAIPath>().enabled == false)
-        {
-            this.gameObject.GetComponent<AIPatrolPath>().enabled = false;
-            this.gameObject.GetComponent<BasicAIPath>().enabled = true;
-        }
-
-    }
-
-    private void OnTriggerExit2D(Collider2D col)
-    {
-        //switch to patrolling when player moves away from enemy
-        if (col.gameObject.tag == "Player" && this.gameObject.GetComponent<BasicAIPath>().enabled == true)
-        {
-            this.gameObject.GetComponent<AIPatrolPath>().enabled = true;
-            this.gameObject.GetComponent<BasicAIPath>().enabled = false;
-        }
-    }
-
     private void OnTriggerStay2D(Collider2D col)
     {
         if (col.gameObject.tag == "Player")
         {
-            
-            if(fireTimer >= fireDelay)
+            if (fireTimer >= fireDelay)
             {
                 //bullet code
                 fireTimer = 0;
@@ -63,12 +41,11 @@ public class PatrolingEnemy : Enemy
         {
             //health - damage
 
-            if(health <= 0)
+            if (health <= 0)
             {
                 OnDeath();
             }
         }
-
     }
 
     private void OnDeath()
