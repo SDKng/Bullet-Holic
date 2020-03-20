@@ -1,2 +1,12 @@
-﻿  Bullet Holic Physics.vcxproj -> C:\Bullet-Holic\NativePlugins\Bullet Holic Physics\Bullet Holic Physics\x64\Debug\BULLETHOLICPHYSICS.dll
+﻿  pch.cpp
+  Bodies.cpp
+  Bullet Holic Physics.cpp
+  Bullet.cpp
+  BulletManager.cpp
+  dllmain.cpp
+  HitBox.cpp
+  Vector2.cpp
+  Generating Code...
+     Creating library C:\Bullet-Holic\Bullet-Holic\NativePlugins\Bullet Holic Physics\Bullet Holic Physics\x64\Debug\BULLETHOLICPHYSICS.lib and object C:\Bullet-Holic\Bullet-Holic\NativePlugins\Bullet Holic Physics\Bullet Holic Physics\x64\Debug\BULLETHOLICPHYSICS.exp
+  Bullet Holic Physics.vcxproj -> C:\Bullet-Holic\Bullet-Holic\NativePlugins\Bullet Holic Physics\Bullet Holic Physics\x64\Debug\BULLETHOLICPHYSICS.dll
           1 file(s) copied.

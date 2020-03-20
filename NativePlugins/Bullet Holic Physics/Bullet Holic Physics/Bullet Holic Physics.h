@@ -13,11 +13,14 @@
 // This class is exported from the dll
 class BULLETHOLICPHYSICS_API CBulletHolicPhysics {
 public:
-	CBulletHolicPhysics(void);
+	CBulletHolicPhysics();
+
 
 	// TODO: add your methods here.
+
+	//int IterateANumber(int iterateThis);
 };
 
 extern BULLETHOLICPHYSICS_API int nBulletHolicPhysics;
 
-BULLETHOLICPHYSICS_API int fnBulletHolicPhysics(void);
+BULLETHOLICPHYSICS_API int fnBulletHolicPhysics(int);

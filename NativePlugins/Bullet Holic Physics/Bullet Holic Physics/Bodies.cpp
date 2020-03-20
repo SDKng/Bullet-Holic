@@ -4,7 +4,7 @@
 
 Bodies::Bodies() {
 
-	vector<Bullet>Bullets;
+	//vector<Bullet>Bullets;
 }
 
 void Bodies::AddWalls() {
