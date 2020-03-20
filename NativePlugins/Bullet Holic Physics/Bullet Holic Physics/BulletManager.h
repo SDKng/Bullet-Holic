@@ -1,5 +1,5 @@
 #pragma once
-#include <list>
+#include <vector>
 #include "Bullet.h"
 
 using namespace std;
@@ -8,13 +8,16 @@ class BulletManager
 {
 public:
 	
-	list<Bullet> Bullets;
-	BulletManager() {}
-	~BulletManager() {}
+	vector<Bullet> Bullets;
+	BulletManager();
+	~BulletManager();
 
-	void AddBullet(Bullet BulletToAdd, int Id) {}
-	void RemoveBullet(Bullet BulletToRemove) {}
-	void UpdateBullets() {}
+	Bullet NULLBULLET;
+	Bullet FindBullet(int id);
+	void AddBullet(Bullet BulletToAdd);
+	bool RemoveBullet(int BulletToRemove, bool isId);
+
+	void UpdateBullets();
 
 };
 

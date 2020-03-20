@@ -117,7 +117,7 @@
       <EnableUAC>false</EnableUAC>
     </Link>
     <PostBuildEvent>
-      <Command>copy/Y "$(TargetDir)$(TargetName).dll" "C:\Bullet-Holic\Assets\Plugins\Bullet Holic Physics"</Command>
+      <Command>copy/Y "$(TargetDir)$(TargetName).dll" "C:\Bullet-Holic\Bullet-Holic\Assets\Plugins\Bullet Holic Physics"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">

@@ -11,7 +11,7 @@ class Bodies
 	void AddEnemies();
 	void UpdatePositions();
 
-	vector<Bullet>Bullets;
+	//list<Bullet>Bullets;
 	//vector<Hitbox>EnemyHitboxes;
 	//vector<Enemy>Enemies;
 	//vector<Walls>Wall;

@@ -31,8 +31,8 @@ public class PlayerShoot : MonoBehaviour
     void Shoot()
     {
         //Takes info from the gun and decides to shoot or not
-
-
+        //put the shoot condition here
+        if (true) { }
     }
     
     

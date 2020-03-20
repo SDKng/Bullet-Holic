@@ -8,12 +8,16 @@ public class PlayerInput : MonoBehaviour
 
     public PlayerMovement movement;
     public PlayerShoot shoot;
+    public Rigidbody2D rb;
+    Animator anim;
 
     Vector2 axisValue;
     bool canMove;
 
     Vector2 mousePosition;
+    Vector2 lookDirection;
     public Texture2D cursorTexture;
+    public Camera cam;
 
 
 
@@ -21,9 +25,12 @@ public class PlayerInput : MonoBehaviour
     void Start()
     {
 
+        rb = GetComponentInParent<Rigidbody2D>();
+        anim = GetComponentInParent<Animator>();
         canMove = true;
         axisValue = new Vector2();
         Debug.Log("Screen Size: (" + Screen.width + ", " + Screen.height + ")");
+        cam = FindObjectOfType<Camera>();
 
         //Cursor.visible = false;
         Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.Auto);
@@ -38,21 +45,35 @@ public class PlayerInput : MonoBehaviour
         // Reset things that need to be reset
 
         axisValue = new Vector2();
-        
 
 
+        anim.SetBool("isWalking", false);
 
 
         //Movement Input Brother
         if (Input.GetAxisRaw("Horizontal") != 0.0f)
         {
             axisValue.x += Input.GetAxisRaw("Horizontal");
+            anim.SetBool("isWalking", true);
         }
 
         if (Input.GetButton("Vertical"))
         {
             axisValue.y += Input.GetAxisRaw("Vertical");
+            anim.SetBool("isWalking", true);
         }
+
+        mousePosition = cam.ScreenToWorldPoint(Input.mousePosition);
+        lookDirection = mousePosition - new Vector2(transform.position.x, transform.position.y);
+        
+        // shootDirection = mousePosition - new Vector2(Screen.width/2, Screen.height/2);
+       // shootDirection = shootDirection.normalized;
+        float lookDirectionDeg = ((Mathf.Atan2(lookDirection.x, lookDirection.y) * 180) / Mathf.PI) - 90;
+
+        //Sending the angle to the animator (face direction for now)
+
+        Debug.Log(lookDirectionDeg);
+        //rb.rotation = lookDirectionDeg;
 
         //Give the input to the Movement class
         movement.canMove = canMove;
@@ -61,7 +82,6 @@ public class PlayerInput : MonoBehaviour
         //Shooting Input Bro
         if (Input.GetButton("Fire1"))
         {
-            mousePosition = Input.mousePosition;
 
             shoot.UpdateShootLocation(Input.mousePosition, new Vector2(transform.position.x, transform.position.y));
             
