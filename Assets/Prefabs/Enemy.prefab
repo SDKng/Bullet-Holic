@@ -13,13 +13,14 @@ GameObject:
   - component: {fileID: 5030411380673655548}
   - component: {fileID: 5030411380673655544}
   - component: {fileID: 5030411380673655545}
+  - component: {fileID: 450942121}
   m_Layer: 9
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5030411380673655546
 Transform:
   m_ObjectHideFlags: 0
@@ -116,6 +117,22 @@ MonoBehaviour:
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
     value: -1
+--- !u!114 &450942121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5030411380673655549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4625f83ae04d51849b9b78181ef80a2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  fireDelay: 0
+  lootDropValue: 0
+  target: {fileID: 0}
 --- !u!1 &5030411381674480469
 GameObject:
   m_ObjectHideFlags: 0

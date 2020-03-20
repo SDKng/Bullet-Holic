@@ -22,7 +22,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3944770893032332875
 Transform:
   m_ObjectHideFlags: 0
@@ -151,7 +151,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  fireRate: 0
+  fireDelay: 0
+  lootDropValue: 0
+  target: {fileID: 0}
 --- !u!61 &3944770893032332874
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -165,7 +167,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.18973684, y: -0.4005623}
+  m_Offset: {x: -0.18973684, y: -0.31209564}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -176,7 +178,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 9.728049, y: 7.282528}
+  m_Size: {x: 9.728049, y: 7.459461}
   m_EdgeRadius: 0
 --- !u!1 &3944770893411998975
 GameObject:
