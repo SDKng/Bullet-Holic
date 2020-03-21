@@ -10,10 +10,15 @@ public class PlayerShoot : MonoBehaviour
     Vector2 playerLocation; //Location of the player
     Vector2 screenSize; //Size of the screen
     // Start is called before the first frame update
+
+    Weapon pistol; 
     void Start()
     {
         screenSize = new Vector2(Screen.width, Screen.height);
         playerLocation = screenSize / 2;
+
+        pistol = new Weapon();
+        pistol.GenerateStats("pistol", 70);
     }
 
     
@@ -28,11 +33,11 @@ public class PlayerShoot : MonoBehaviour
     }
     
     
-    void Shoot()
+    public void Shoot()
     {
         //Takes info from the gun and decides to shoot or not
 
-
+        pistol.Shoot(shootLocation);
     }
     
     

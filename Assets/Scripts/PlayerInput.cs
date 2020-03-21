@@ -64,6 +64,7 @@ public class PlayerInput : MonoBehaviour
             mousePosition = Input.mousePosition;
 
             shoot.UpdateShootLocation(Input.mousePosition, new Vector2(transform.position.x, transform.position.y));
+            shoot.Shoot();
             
         }
     }

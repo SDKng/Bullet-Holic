@@ -40,7 +40,7 @@ extern "C" {
 	PLUGINFUNCTION void CreateBullet(float PosX, float PosY, float VelX, float VelY, float AccX, float AccY, int ID, int Alignment) {
 
 		if (Alignment == 0) friendlyBullets.AddBullet(Bullet(Vector2(PosX, PosY), Vector2(VelX, VelY), Vector2(AccX, AccY), ID));
-		else if (Alignment == 1) friendlyBullets.AddBullet(Bullet(Vector2(PosX, PosY), Vector2(VelX, VelY), Vector2(AccX, AccY), ID));
+		else if (Alignment == 1) enemyBullets.AddBullet(Bullet(Vector2(PosX, PosY), Vector2(VelX, VelY), Vector2(AccX, AccY), ID));
 	}
 
 
