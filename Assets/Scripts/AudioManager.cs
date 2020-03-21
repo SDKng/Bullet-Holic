@@ -36,9 +36,7 @@ public class AudioManager : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-       // master.onValueChanged.AddListener(delegate { UpdateMasterVolume(); });
-      //  music.onValueChanged.AddListener(delegate { UpdateMusicVolume(); });
-       // effects.onValueChanged.AddListener(delegate { UpdateEffectsVolume(); });
+    
     }
 
     public void UpdateMasterVolume()
